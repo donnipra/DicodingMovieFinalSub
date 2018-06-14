@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    card_view:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:id="@+id/cv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rel_item_now_play"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/img_poster"
+                android:layout_width="114dp"
+                android:layout_height="220dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                tools:src="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_toEndOf="@id/img_poster"
+                android:layout_toRightOf="@id/img_poster"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                tools:text="Jurassic World: Fallen Kingdom" />
+
+            <TextView
+                android:id="@+id/tv_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_toEndOf="@id/img_poster"
+                android:layout_toRightOf="@id/img_poster"
+                android:maxLines="4"
+                android:textSize="12sp"
+                tools:text="A volcanic eruption threatens the remaining dinosaurs on the island of Isla Nublar, where the creatures have freely roamed for several years after the demise of an animal theme park known as Jurassic World. Claire Dearing, the former park manager, has now founded the Dinosaur Protection" />
+
+            <TextView
+                android:id="@+id/tv_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/tv_overview"
+                android:layout_marginBottom="49dp"
+                android:drawableLeft="@drawable/ic_date_range"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="12sp"
+                tools:text="2018-06-06" />
+
+            <LinearLayout
+                android:layout_width="228dp"
+                android:layout_height="46dp"
+                android:layout_alignBottom="@+id/img_poster"
+                android:layout_alignStart="@+id/tv_title"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="8dp">
+
+                <Button
+                    android:id="@+id/btn_detail"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_movie_filter_12dp"
+                    android:text="@string/label_detail"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btn_share"
+                    style="@style/MyBtnShare"
+                    android:layout_width="195dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_share_white_12"
+                    android:text="@string/label_share"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

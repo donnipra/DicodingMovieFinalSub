@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Made Mov Final</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Aplikasi Film</string>
+    <string name="nav_header_subtitle">donnipra.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Pengaturan</string>
+
+    <string name="err_load_failed">Gagal Ambil Data.\nCek Koneksi Internetmu!</string>
+
+
+    <string name="label_now_playing">Sedang Tayang</string>
+    <string name="label_upcoming">Segera Tayang</string>
+    <string name="label_favorite">Favorit</string>
+    <string name="label_setting">Pengaturan</string>
+    <string name="label_language">Bahasa</string>
+
+    <string name="label_detail">Detail</string>
+    <string name="label_share">Bagi</string>
+
+    <string name="label_keyword">Kata Kunci</string>
+    <string name="label_search">Pencarian</string>
+
+    <string name="cv_save">Kamu memfavoritkan film ini</string>
+    <string name="cv_remove">Film ini dihapus dari list fovorit</string>
+    <string name="cv_coming_soon">Akan datang</string>
+
+    <string name="label_overview">Ulasan</string>
+    <string name="label_popularity">Popularitas</string>
+    <string name="label_release_date">Tanggal Rilis</string>
+    <string name="appwidget_text">Film Favorit</string>
+    <string name="add_widget">Tambah widget</string>
+    <string name="empty_text">No Data in Favorite</string>
+
+    <string name="action_notification">Notifikasi</string>
+    <string name="key_reminder_daily">reminder_daily</string>
+    <string name="key_reminder_upcoming">reminder_upcoming</string>
+
+    <string name="label_daily_reminder">Notifikasi pengingat harian</string>
+    <string name="label_upcoming_reminder">Notifikasi film yang akan tayang</string>
+    <string name="label_activated">diaktifkan</string>
+    <string name="label_deactivated">dinonaktifkan</string>
+
+    <string name="label_daily_reminder_title">Notifikasi Pengingat Harian</string>
+    <string name="label_daily_reminder_summary">Nyalakan/matikan notifikasi pengingat harian</string>
+
+    <string name="label_upcoming_reminder_title">Notifikasi Film Yang Akan Datang</string>
+    <string name="label_upcoming_reminder_summary">Nyalakan/matikan notifikasi film yang akan datang</string>
+
+    <string name="label_alarm_daily_reminder">Hallo, Kamu ingin melihat film baru hari ini?</string>
+</resources>

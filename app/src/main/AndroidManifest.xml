@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.donnipra.dicodingsub4">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.donnipra.moviedb.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.donnipra.moviedb.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:label="@string/label_search"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.detail.DetailActivity"
+            android:label="@string/label_detail"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".ui.setting.SettingsActivity"
+            android:label="@string/label_setting"/>
+
+        <provider
+            android:name=".database.provider.FavoriteProvider"
+            android:authorities="com.donnipra.moviedb"
+            android:exported="true"
+            android:readPermission="com.donnipra.moviedb.READ_DATABASE"
+            android:writePermission="com.donnipra.moviedb.WRITE_DATABASE" />
+
+        <receiver android:name=".widget.StackWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/stack_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".widget.StackWidgetService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_REMOTEVIEWS"></service>
+
+        <receiver
+            android:name=".util.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".util.SchedulerService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
